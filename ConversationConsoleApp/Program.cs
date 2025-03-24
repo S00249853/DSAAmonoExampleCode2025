@@ -12,7 +12,7 @@ namespace ConversationConsoleApp
                                     new List<string>()
                                                 {"None of your Business",
                                                     "My Name is Bill",
-                                                    "I've lost my memory"});
+                                                    "I've lost my memory"}, WHO.COMPUTER);
 
             //ConversationNode phrase = conversataion.Find(conversataion.root, "None of your Business");
             conversataion.InsertAfter("None of your Business", "How rude");

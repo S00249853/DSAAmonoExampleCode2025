@@ -4,18 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace DSATrees
 {
+    public enum WHO { HUMAN,COMPUTER}
     public class ConversationTree
     {
+   
         public ConversationNode root;
+  
 
         public ConversationNode InsertAfter(string phrase, string NextPhrase)
         {
             ConversationNode found = Find(root, phrase);
             if (found != null)
             {
-                ConversationNode newNode = new ConversationNode(NextPhrase, null);
+                ConversationNode newNode = new ConversationNode(NextPhrase, null, found.talking == WHO.COMPUTER ? WHO.HUMAN : WHO.COMPUTER);
                 found.children.Add(newNode);
                 return newNode;
             }
@@ -39,21 +43,42 @@ namespace DSATrees
             return null;
         }
 
-        public ConversationNode HoldConversation(ConversationNode current)
+        public ConversationNode HoldConversation(ConversationNode Current)
         {
-            if (current != null)
+            
+            while (Current != null)
             {
                 int i = 0;
-                foreach (ConversationNode answer in current.children)
+                if (Current.talking == WHO.COMPUTER && Current.children.Count > 0)
                 {
-                    Console.WriteLine("Responses {0} {1}", i++, answer.phrase);
+
+                    foreach (ConversationNode answer in Current.children)
+                    {
+                        Console.WriteLine("Responses {0} {1}", i++, answer.phrase);
+                    }
+                    int ans;
+                    if (Int32.TryParse(Console.ReadLine(), out ans) && ans > -1 && ans < Current.children.Count - 1)
+                    {
+                        Current = Current.children[ans];
+                    }
+                    else
+                    {
+                        Console.WriteLine("Incorrect choice");
+                    }
+
                 }
-                if(current.children.Count() > 0)
-                    // int.Parse(Console.ReadLine())
-                    return current.children[new Random().Next(current.children.Count())];
+                else if (Current.talking == WHO.HUMAN && Current.children.Count == 1)
+                {
+                    Console.WriteLine("{0} ", Current.children[0].phrase);
+                    break;
+                }
+                else break;
             }
-            return null;
+            Console.WriteLine("End of");
+          Console.ReadKey();
+            return Current;
         }
+
 
        
     }
@@ -63,17 +88,19 @@ namespace DSATrees
 
 
         public string phrase;
+        public WHO talking;
 
 
         public ConversationNode(string Phrase,
-                        List<string> childPhrases)
+                        List<string> childPhrases, WHO who)
         {
+            talking = who;
             phrase = Phrase;
             if (childPhrases != null)
             {
                 foreach (var p in childPhrases)
                 {
-                    children.Add(new ConversationNode(p, null));
+                    children.Add(new ConversationNode(p, null, talking == WHO.COMPUTER?WHO.HUMAN:WHO.COMPUTER));
                 }
             }
         }
