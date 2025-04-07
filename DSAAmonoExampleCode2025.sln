@@ -22,9 +22,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TileSheetEngineExample2023"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TilingUsingSheetWithColliders2023", "TilingUsingSheetWithColliders2023\TilingUsingSheetWithColliders2023.csproj", "{11D63E8B-1D0C-4487-9EEA-BC435B9A5333}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MouseFire2324", "MouseFire2324\MouseFire2324.csproj", "{0CFC6276-14EC-4DD8-B6DC-10911613CC33}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConversationConsoleApp", "ConversationConsoleApp\ConversationConsoleApp.csproj", "{69A00990-E6A1-4C24-B971-B17C14D5373F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MouseFire2324", "MouseFire2324\MouseFire2324\MouseFire2324.csproj", "{CC3562B8-A221-4166-952F-5AEAF297A05D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trees2025", "Trees2025\Trees2025.csproj", "{D819B20A-0736-4F8F-960B-E02C73C38EAA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -60,14 +62,18 @@ Global
 		{11D63E8B-1D0C-4487-9EEA-BC435B9A5333}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11D63E8B-1D0C-4487-9EEA-BC435B9A5333}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{11D63E8B-1D0C-4487-9EEA-BC435B9A5333}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0CFC6276-14EC-4DD8-B6DC-10911613CC33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0CFC6276-14EC-4DD8-B6DC-10911613CC33}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0CFC6276-14EC-4DD8-B6DC-10911613CC33}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0CFC6276-14EC-4DD8-B6DC-10911613CC33}.Release|Any CPU.Build.0 = Release|Any CPU
 		{69A00990-E6A1-4C24-B971-B17C14D5373F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{69A00990-E6A1-4C24-B971-B17C14D5373F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69A00990-E6A1-4C24-B971-B17C14D5373F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69A00990-E6A1-4C24-B971-B17C14D5373F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC3562B8-A221-4166-952F-5AEAF297A05D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC3562B8-A221-4166-952F-5AEAF297A05D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC3562B8-A221-4166-952F-5AEAF297A05D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC3562B8-A221-4166-952F-5AEAF297A05D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D819B20A-0736-4F8F-960B-E02C73C38EAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D819B20A-0736-4F8F-960B-E02C73C38EAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D819B20A-0736-4F8F-960B-E02C73C38EAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D819B20A-0736-4F8F-960B-E02C73C38EAA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
